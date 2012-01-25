@@ -5,5 +5,4 @@ do curso online de **Fundamentos Java e Orientação a Objetos** da [AlgaWorks](
 
 Para assistir as aulas completas que explicam esses exemplos/exercícios, 
 acesse:
-
 http://www.algaworks.com/cursos-online/fundamentos-java-e-orientacao-a-objetos
