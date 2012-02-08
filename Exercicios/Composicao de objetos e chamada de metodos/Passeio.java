@@ -6,9 +6,9 @@ public class Passeio {
 		p1.nome = "José";
 		
 		/*
-		 * Cachorro cachorro = new Cachorro()
-		 * p1.cachorro = cachorro;
-		 */
+		Cachorro cachorro = new Cachorro()
+		p1.cachorro = cachorro;
+		*/
 		p1.cachorro = new Cachorro();
 		
 		p1.cachorro.nome = "Bidu";
