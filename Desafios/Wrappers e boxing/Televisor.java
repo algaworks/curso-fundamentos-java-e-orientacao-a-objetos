@@ -13,10 +13,10 @@ class Televisor {
 	}
 	
 	void mudarVolume(Integer novoVolume) {
-		if (novoVolume.equals(volume)) {
+		if (novoVolume == volume) {
 			System.out.println("Novo volume é também o volume atual.");
 		} else {
-			volume = new Integer(novoVolume.intValue());
+			volume = new Integer(novoVolume.byteValue());
 			System.out.println("Volume alterado para " + volume);
 		}
 	}
@@ -30,7 +30,7 @@ class Televisor {
 		tv.mudarCanal(130);
 		
 		// Deveria mudar o volume e canal
-		tv.mudarVolume(15);
+		tv.mudarVolume(300);
 		tv.mudarCanal(10);
 	}
 
