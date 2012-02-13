@@ -12,8 +12,8 @@ public class MegaSena {
 			// gera número aleatório, arredonda e converte para inteiro
 			int numeroSorteado = (int) Math.round(Math.random() * NUMERO_MAXIMO);
 			
-			// verifica se número já foi sorteado (se existe na sequencia)
-			if (!this.jaFoiSorteado(numeroSorteado)) {
+			// verifica se número ainda não foi sorteado e não é 0
+			if (!this.jaFoiSorteado(numeroSorteado) && numeroSorteado != 0) {
 				// adiciona o número sorteado no array de números sorteados
 				this.numerosSorteados[i-1] = numeroSorteado;
 			} else {
