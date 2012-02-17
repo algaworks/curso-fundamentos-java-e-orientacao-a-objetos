@@ -1,9 +1,9 @@
 import java.math.BigDecimal;
 
 /**
- * Representa o cargo de um político.
- * Um cargo possui um salário fixo, o qual é pago sem contar com as
- * verbas e auxílios extraordinários. 
+ * Representa o cargo de um pol√≠tico.
+ * Um cargo possui um sal√°rio fixo, o qual √© pago sem contar com as
+ * verbas e aux√≠lios extraordin√°rios. 
  * 
  * @author Thiago Faria
  *
@@ -11,14 +11,14 @@ import java.math.BigDecimal;
 public class Cargo {
 
 	/**
-	 * Descrição do cargo. Um nome que define a função do político,
+	 * Descri√ß√£o do cargo. Um nome que define a fun√ß√£o do pol√≠tico,
 	 * como por exemplo: vereador, deputado estadual, etc.
 	 */
 	private String descricao;
 	
 	/**
-	 * O valor do salário dos políticos que possuem o cargo.
-	 * Não inclui verbas e auxílios extraordinários.
+	 * O valor do sal√°rio dos pol√≠ticos que possuem o cargo.
+	 * N√£o inclui verbas e aux√≠lios extraordin√°rios.
 	 */
 	private BigDecimal salario;
 	

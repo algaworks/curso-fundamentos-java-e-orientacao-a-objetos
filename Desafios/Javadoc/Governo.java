@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.math.BigDecimal;
 
 /**
- * Representa uma organização que possui um conjunto de políticos
- * que governam um estado, município, etc.
+ * Representa uma organiza√ß√£o que possui um conjunto de pol√≠ticos
+ * que governam um estado, munic√≠pio, etc.
  * 
  * @author Thiago Faria
  *
@@ -14,51 +14,51 @@ import java.math.BigDecimal;
 public class Governo {
 
 	/**
-	 * Mapa com uma lista de políticos por estado da federacão.
-	 * A chave do mapa faz referência à sigla do partido e
-	 * o valor à uma lista de políticos do partido.
+	 * Mapa com uma lista de pol√≠ticos por estado da federac√£o.
+	 * A chave do mapa faz refer√™ncia √† sigla do partido e
+	 * o valor √† uma lista de pol√≠ticos do partido.
 	 */
 	private Map<String, List<Politico>> partidosPoliticos;
 
 	/**
 	 * Construtor do governo.
-	 * Instancia um mapa vazio de políticos.
+	 * Instancia um mapa vazio de pol√≠ticos.
 	 */
 	public Governo() {
 		this.partidosPoliticos = new HashMap<String, List<Politico>>();
 	}
 
 	/**
-	 * Adiciona um político à relação de políticos.
+	 * Adiciona um pol√≠tico √† rela√ß√£o de pol√≠ticos.
 	 * 
-	 * @param partidoPolitico sigla do partido político
-	 * @param politico político a ser adicionado para o partido
+	 * @param partidoPolitico sigla do partido pol√≠tico
+	 * @param politico pol√≠tico a ser adicionado para o partido
 	 */
 	public void adicionarPolitico(String partidoPolitico, Politico politico) {
-		// recupera a lista de políticos para um partido
+		// recupera a lista de pol√≠ticos para um partido
 		List<Politico> politicos = this.partidosPoliticos.get(partidoPolitico);
 		
-		// se não existir uma lista de políticos para o partido informado,
-		// devemos instanciar uma nova lista (pois é a primeira inclusão neste partido)
+		// se n√£o existir uma lista de pol√≠ticos para o partido informado,
+		// devemos instanciar uma nova lista (pois √© a primeira inclus√£o neste partido)
 		if (politicos == null) {
 			politicos = new ArrayList<Politico>();
 		}
 		
-		// adiciona o político recebido como parâmetro à lista de políticos
+		// adiciona o pol√≠tico recebido como par√¢metro √† lista de pol√≠ticos
 		politicos.add(politico);
 		
-		// adiciona a lista de políticos ao mapa de partidos usando
+		// adiciona a lista de pol√≠ticos ao mapa de partidos usando
 		// como chave o nome do partido
 		this.partidosPoliticos.put(partidoPolitico, politicos);
 	}
 
 	/**
-	 * Consulta e calcula os gastos com salários de todos os políticos
+	 * Consulta e calcula os gastos com sal√°rios de todos os pol√≠ticos
 	 * do partido informado.
-	 * O valor retornado é em Reais.
+	 * O valor retornado √© em Reais.
 	 * 
-	 * @param partidoPolitico sigla do partido político a ser filtrado na consulta
-	 * @return valor de gastos com salários, em reais
+	 * @param partidoPolitico sigla do partido pol√≠tico a ser filtrado na consulta
+	 * @return valor de gastos com sal√°rios, em reais
 	 */
 	public BigDecimal calcularGastosComSalario(String partidoPolitico) {
 		BigDecimal total = BigDecimal.ZERO;
@@ -74,13 +74,13 @@ public class Governo {
 	}
 	
 	/**
-	 * Consulta e calcula os gastos com salários de todos os políticos
-	 * do cargo e partido político informados.
-	 * O valor retornado é em Reais.
+	 * Consulta e calcula os gastos com sal√°rios de todos os pol√≠ticos
+	 * do cargo e partido pol√≠tico informados.
+	 * O valor retornado √© em Reais.
 	 * 
-	 * @param cargo cargo dos políticos a ser filtrado na consulta
-	 * @param partidoPolitico sigla do partido político a ser filtrado na consulta
-	 * @return valor de gastos com salários, em reais
+	 * @param cargo cargo dos pol√≠ticos a ser filtrado na consulta
+	 * @param partidoPolitico sigla do partido pol√≠tico a ser filtrado na consulta
+	 * @return valor de gastos com sal√°rios, em reais
 	 */
 	public BigDecimal calcularGastosComSalarioParaCargo(Cargo cargo, String partidoPolitico) {
 		BigDecimal total = BigDecimal.ZERO;
@@ -88,7 +88,7 @@ public class Governo {
 		
 		if (politicos != null) {
 			for (Politico politico : politicos) {
-				// verifica se cargo do político é igual ao cargo informado no parâmetro
+				// verifica se cargo do pol√≠tico √© igual ao cargo informado no par√¢metro
 				if (politico.getCargo().equals(cargo)) {
 					total = total.add(politico.getCargo().getSalario());
 				}

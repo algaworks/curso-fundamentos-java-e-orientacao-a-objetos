@@ -2,7 +2,7 @@ import java.text.DecimalFormat;
 import java.math.BigDecimal;
 
 /**
- * Classe principal para execução do programa.
+ * Classe principal para execu√ß√£o do programa.
  * 
  * @author Thiago Faria
  *
@@ -30,12 +30,12 @@ public class Principal {
 		
 		// adiciona vereadores
 		Politico politico = new Politico();
-		politico.setNome("João das Couves");
+		politico.setNome("Jo√£o das Couves");
 		politico.setCargo(vereador);
 		governo.adicionarPolitico("RBLH", politico);
 		
 		politico = new Politico();
-		politico.setNome("Zé Mané");
+		politico.setNome("Z√© Man√©");
 		politico.setCargo(vereador);
 		governo.adicionarPolitico("PCOR", politico);
 		
@@ -56,13 +56,13 @@ public class Principal {
 		governo.adicionarPolitico("LDRS", politico);
 		
 		politico = new Politico();
-		politico.setNome("Fátima Gonçalves");
+		politico.setNome("F√°tima Gon√ßalves");
 		politico.setCargo(deputadoEstadual);
 		governo.adicionarPolitico("PCOR", politico);
 		
 		// adiciona prefeito
 		politico = new Politico();
-		politico.setNome("Sebastião Mendes");
+		politico.setNome("Sebasti√£o Mendes");
 		politico.setCargo(prefeito);
 		governo.adicionarPolitico("PCOR", politico);
 		
